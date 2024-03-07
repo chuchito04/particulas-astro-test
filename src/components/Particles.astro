@@ -1,0 +1,80 @@
+---
+import AstroParticles from 'astro-particles'
+import type { ISourceOptions } from 'tsparticles-engine'
+
+const coolParticles: ISourceOptions = {
+  background: {
+    color: {
+      value: '#000',
+    },
+  },
+  fpsLimit: 60,
+  fullScreen: {
+    enable: true,
+    zIndex: -1,
+  },
+  particles: {
+    color: {
+      value: '#FFF',
+    },
+    links: {
+      color: '#FFF',
+      distance: 100,
+      enable: true,
+      opacity: 0.3,
+      width: 0.5,
+    },
+    collisions: {
+      enable: true,
+    },
+    move: {
+      direction: 'none',
+      enable: true,
+      outMode: 'bounce',
+      random: false,
+      speed: 0.5,
+      straight: false,
+    },
+    number: {
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+      value: 80,
+    },
+    opacity: {
+      value: 0.3,
+    },
+    shape: {
+      type: 'circle',
+    },
+    size: {
+      random: true,
+      value: 3,
+    },
+  },
+  interactivity: {
+    detectsOn: 'window',
+    events: {
+      onClick: {
+        enable: true,
+        mode: 'push',
+      },
+      onHover: {
+        enable: true,
+        mode: 'repulse',
+      },
+    },
+  },
+}
+---
+
+<script>
+  import { tsParticles } from 'tsparticles-engine'
+  import { loadFull } from 'tsparticles'
+  ;(async () => {
+    await loadFull(tsParticles)
+  })()
+</script>
+
+<AstroParticles id="tsparticles" options={coolParticles} />
