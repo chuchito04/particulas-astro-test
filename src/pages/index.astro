@@ -1,8 +1,4 @@
 ---
-import { Image } from 'astro:assets'
-
-import daynoLogo from '../assets/short-logo-white_dayno.png'
-
 import Particles from '../components/Particles.astro'
 ---
 
@@ -17,15 +13,6 @@ import Particles from '../components/Particles.astro'
   <body class="bg-black h-screen">
     <div class="w-full h-full flex flex-col justify-center items-center">
       <Particles />
-      <div class="flex flex-col items-center mt-[-200px]">
-        <Image
-          alt="Dayno Logo"
-          src={daynoLogo}
-          width={200}
-          class="select-none"
-          loading="eager"
-        />
-      </div>
     </div>
   </body>
 </html>
