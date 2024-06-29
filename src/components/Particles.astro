@@ -1,80 +1,23 @@
----
-import AstroParticles from 'astro-particles'
-import type { ISourceOptions } from 'tsparticles-engine'
+<div id="particles-js"></div>
 
-const coolParticles: ISourceOptions = {
-  background: {
-    color: {
-      value: '#000',
-    },
-  },
-  fpsLimit: 60,
-  fullScreen: {
-    enable: true,
-    zIndex: -1,
-  },
-  particles: {
-    color: {
-      value: '#FFF',
-    },
-    links: {
-      color: '#FFF',
-      distance: 100,
-      enable: true,
-      opacity: 0.3,
-      width: 0.5,
-    },
-    collisions: {
-      enable: true,
-    },
-    move: {
-      direction: 'right',
-      enable: true,
-      outMode: 'bounce',
-      random: false,
-      speed: 0.5,
-      straight: false,
-    },
-    number: {
-      density: {
-        enable: true,
-        value_area: 800,
-      },
-      value: 80,
-    },
-    opacity: {
-      value: 0.3,
-    },
-    shape: {
-      type: 'circle',
-    },
-    size: {
-      random: true,
-      value: 3,
-    },
-  },
-  interactivity: {
-    detectsOn: 'window',
-    events: {
-      onClick: {
-        enable: true,
-        mode: 'push',
-      },
-      onHover: {
-        enable: true,
-        mode: 'repulse',
-      },
-    },
-  },
-}
----
-
+<script is:inline src="/particles.js"></script>
 <script>
-  import { tsParticles } from 'tsparticles-engine'
-  import { loadFull } from 'tsparticles'
-  ;(async () => {
-    await loadFull(tsParticles)
-  })()
+  document.addEventListener('DOMContentLoaded', function () {
+    particlesJS.load('particles-js', '/particles-config.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  });
 </script>
 
-<AstroParticles id="tsparticles" options={coolParticles} />
+<style>
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+</style>

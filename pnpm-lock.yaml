@@ -23,6 +23,9 @@ dependencies:
   astro-particles:
     specifier: ^2.10.0
     version: 2.10.0
+  particles.js:
+    specifier: ^2.0.0
+    version: 2.0.0
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -3356,6 +3359,10 @@ packages:
     resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
     dependencies:
       entities: 4.5.0
+    dev: false
+
+  /particles.js@2.0.0:
+    resolution: {integrity: sha512-8e0JIqkRbMMPlFBnF9f+92hX1s07jdkd3tqB8uHE9L+cwGGjIYjQM7QLgt0FQ5MZp6SFFYYDm/Y48pqK3ZvJOQ==}
     dev: false
 
   /path-browserify@1.0.1:
